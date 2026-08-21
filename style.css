@@ -402,14 +402,14 @@
 
   /* ---------- virtual badge ---------- */
   .virtual{
-    display:inline-block;
+    display:inline-block !important;
     background:var(--amber);
-    color:var(--deep);
-    font-family:"Archivo",sans-serif;
-    font-size:.6875rem;
-    font-weight:700;
-    letter-spacing:.14em;
-    text-transform:uppercase;
+    color:var(--deep) !important;
+    font-family:"Archivo",sans-serif !important;
+    font-size:.6875rem !important;
+    font-weight:700 !important;
+    letter-spacing:.14em !important;
+    text-transform:uppercase !important;
     padding:.28rem .55rem;
     border-radius:2px;
     vertical-align:.28em;
