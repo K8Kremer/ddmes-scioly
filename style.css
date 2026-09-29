@@ -431,3 +431,71 @@
     outline:2px solid var(--amber);
     outline-offset:3px;
   }
+
+
+  /* ---------- event groups (color key) ---------- */
+  .tag-fieldA{--tag:#12A08F;}
+  .tag-fieldB{--tag:#2E78B7;}
+  .tag-decode{--tag:#6B4FA6;}
+  .tag-build{--tag:#D9821A;}
+  .tag-prep{--tag:#0D2B33;}
+  .tag-special{--tag:#C9A227;}
+  .tag-none{--tag:rgba(13,43,51,.25);}
+
+  .groups{
+    list-style:none;
+    margin:0 0 1.25rem;
+    padding:0;
+    display:grid;
+    gap:.6rem;
+    max-width:60ch;
+  }
+  .groups li{
+    border-left:4px solid var(--tag);
+    padding:.2rem 0 .2rem .9rem;
+  }
+  .groups strong{display:block;font-weight:600;}
+  .groups span{font-size:.9375rem;color:rgba(13,43,51,.72);}
+
+  /* ---------- schedule lists ---------- */
+  .dates li[class*="tag-"]{
+    border-left:4px solid var(--tag);
+    padding-left:1rem;
+  }
+  .dates li[class*="tag-"]:first-child{padding-top:.25rem;}
+  .dates .tag-none .what strong{font-weight:500;color:rgba(13,43,51,.6);}
+  .dates .tag-special,.dates .tag-prep{background:rgba(201,162,39,.08);}
+  .dates .tag-prep{background:rgba(13,43,51,.05);}
+  .dates li.past{opacity:.45;}
+  .dates li.next .when::before{
+    content:"Next";
+    display:inline-block;
+    margin-right:.5rem;
+    padding:.12rem .4rem;
+    border-radius:2px;
+    background:var(--amber);
+    color:var(--deep);
+    font-family:"Archivo",sans-serif;
+    font-size:.625rem;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    vertical-align:.2em;
+  }
+  .schedule li{padding-block:1rem;}
+  .schedule li:first-child{padding-top:1rem;}
+  .all-dates .month{
+    font-size:1.25rem;
+    color:var(--shift);
+    margin:2rem 0 .5rem;
+  }
+  .all-dates .month:first-child{margin-top:0;}
+  .dates-note a{color:var(--iris);text-underline-offset:3px;}
+
+  /* ---------- next meeting (home hero) ---------- */
+  .ask-when b{font-weight:600;}
+  .ask-when em{
+    font-style:normal;
+    color:var(--amber);
+  }
+  .ask-note strong{color:#fff;font-weight:600;}

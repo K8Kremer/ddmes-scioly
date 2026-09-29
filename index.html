@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Science Olympiad · Dillard Drive Magnet Elementary</title>
-<meta name="description" content="Science Olympiad at Dillard Drive Magnet Elementary School. Virtual parent information session on Google Meet, Monday, September 14 at 5:00 PM.">
+<meta name="description" content="Science Olympiad at Dillard Drive Magnet Elementary School. Team meetings are Fridays 4:15–5:00 PM; see the next meeting and upcoming dates.">
 
 <!-- ===================================================================
      Science Olympiad · Dillard Drive Magnet Elementary
      Contact: Kate Kremer, katrinakremer@gmail.com
 
      WHERE TO EDIT THINGS LATER:
-       Meet link + calendar link .... the "ask" block in the <header>
-       Meeting dates ................ the <ul class="dates"> list
+       Meeting dates ................ schedule.js (home + calendar read it)
+       Team Job reminder ............ the "ask-note" in the <header>
        Everything else .............. plain text inside <main>
      =================================================================== -->
 
@@ -119,13 +119,12 @@
       </svg>
     </div>
 
-    <div class="ask">
-      <p class="ask-when"><span>Start here</span><span class="virtual">VIRTUAL</span>Parent information session<br>Monday, September 14 · 5:00–5:45&nbsp;PM</p>
-      <a class="btn" href="https://meet.google.com/ddt-fdnw-dhd">Join on Google Meet</a>
-      <a class="btn-quiet" href="https://calendar.app.google/jt3D5h8HJxTS1FVr6">Add to my calendar</a>
+    <div class="ask" id="next-meeting">
+      <p class="ask-when"><span>Next meeting</span><b data-next="date">Friday, October 2 · 4:15–5:00 PM</b><br><em data-next="what">Field A Friday</em></p>
+      <a class="btn" href="calendar.html">See the full calendar</a>
       <a class="btn-quiet" href="https://forms.gle/EhTVQ87YRkrmuYxG6">Fill out the interest form</a>
-      <a class="btn-quiet" href="files/parent-info-session.pdf">View the slides</a>
-      <p class="ask-note">This session is online; no need to come to school. Can't make it? Email <a href="mailto:katrinakremer@gmail.com">katrinakremer@gmail.com</a> and I'll send you the recording.</p>
+      <a class="btn-quiet" href="files/parent-info-session.pdf">Parent info session slides</a>
+      <p class="ask-note" data-until="2026-10-02"><strong>Team Job applications are due Friday, Oct 2.</strong> Students can bring theirs to practice, or email it to <a href="mailto:katrinakremer@gmail.com">katrinakremer@gmail.com</a>.</p>
     </div>
   </div>
 </header>
@@ -136,18 +135,25 @@
     <div class="shell split">
       <p class="label">Calendar</p>
       <div>
-        <h2>Two dates to know</h2>
-        <ul class="dates">
-          <li>
-            <p class="when">Monday, Sept 14<small>5:00–5:45 PM · Virtual on Google Meet</small></p>
-            <p class="what"><strong>Parent information session (online)</strong><span>Held on Google Meet, so you can join from home. What Science Olympiad is, what the year looks like, what we need from families, and how to sign up. You'll also get the <a href="https://forms.gle/EhTVQ87YRkrmuYxG6">interest form</a>, where you and your student rank the events they'd most like to try. Bring your questions! Can't make it? Catch up with the <a href="files/parent-info-session.pdf">slides from the session</a>.</span></p>
-          </li>
-          <li>
-            <p class="when">Friday, Sept 25<small>4:15–5:00 PM · At school</small></p>
-            <p class="what"><strong>First team meeting (in person)</strong><span>Students work together in small groups while we watch how the team comes together: who follows directions, who works well independently, who collaborates. That, alongside the ranked interest form, is how we build strong event teams. Before this meeting, students complete the <a href="files/take-home-assignment.pdf">take-home science challenge</a> and bring their filled-out <a href="files/lab-sheet.pdf">lab sheet</a>.</span></p>
+        <h2>Coming up</h2>
+        <ul class="dates" id="upcoming" data-count="4">
+          <li class="tag-fieldA">
+            <p class="when">Friday, Oct 2<small>4:15–5:00 PM · At school</small></p>
+            <p class="what"><strong>Field A Friday</strong><span>Geology Rocks!, Buzzworthy, Codebusters</span></p>
           </li>
         </ul>
-        <p class="dates-note">Events will be assigned after the first team meeting. Once the season is underway, our regular team meetings will be held on Fridays.</p>
+        <p class="dates-note">Team meetings are Fridays, 4:15–5:00, with one event group meeting each week. <a href="calendar.html">See every date and how Fridays work.</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="shell split">
+      <p class="label">Team Jobs</p>
+      <div class="prose">
+        <h2>Student team jobs</h2>
+        <p>Students can apply for a Team Job: <strong>Team Captain, Setup Crew, Supply Manager, Timekeeper, Attendance or Historian</strong>. They're how students help run practice, from starting the meeting to keeping the supplies stocked.</p>
+        <p data-until="2026-10-02">Applications are due <strong>Friday, Oct 2</strong>. Students can bring theirs to practice, or email it to <a href="mailto:katrinakremer@gmail.com">katrinakremer@gmail.com</a>.</p>
       </div>
     </div>
   </section>
@@ -206,5 +212,6 @@
   </div>
 </footer>
 
+<script src="schedule.js"></script>
 </body>
 </html>
