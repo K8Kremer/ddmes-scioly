@@ -3,9 +3,8 @@
 Run from the repo root on a machine with the project files mounted:
     python3 tools/build_resources.py [/mnt/project-files]
 
-For each event it publishes the student lesson guide, the journal (Field Journal,
-Case File or Engineer's Logbook) and, where one exists, the practice test with the
-coach-only answer key pages removed. Saturday builds get the logbook only, the same
+For each event it publishes the student lesson guide and the journal (Field Journal,
+Case File or Engineer's Logbook). Practice tests stay off the public site. Saturday builds get the logbook only, the same
 as the student binders. Nothing named after a student is copied.
 """
 import io, os, sys
@@ -110,7 +109,4 @@ for slug, (folder, journal) in EVENTS.items():
     if folder:
         publish(os.path.join(SRC, "lessons", folder, f"{slug}-student-packet.pdf"),
                 os.path.join(d, "lesson-guide.pdf"))
-        test = os.path.join(SRC, "lessons", folder, f"{slug}-practice-test.pdf")
-        if os.path.exists(test):
-            publish(test, os.path.join(d, "practice-test.pdf"), drop_keys=True)
     publish(os.path.join(SRC, journal), os.path.join(d, "journal.pdf"))
